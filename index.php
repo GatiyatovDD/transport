@@ -21,6 +21,14 @@ switch ($_GET['page']){
             $msg = 'Войдите в систему для просмотра доступных маршрутов';
         }
         break;
+    case 'n':
+        if (isset($_SESSION['login'])) {
+            require "cruise.php";
+        }
+        else{
+            $msg = 'Войдите в систему для просмотра доступных рейсов';
+        }
+        break;
     case 'b':
         if (isset($_SESSION['login'])) {
             require "cargo.php";
@@ -29,15 +37,15 @@ switch ($_GET['page']){
             $msg = 'Войдите в систему для просмотра и добавления Заказов (грузов)';
         }
         break;
-    case 't':
-        if (isset($_SESSION['login'])){
-            require "tasks.php";
-            require "taskform.php";
-        }
-        else{
-            $msg = 'Войдите в систему для просмотра и создания задач';
-        }
-        break;
+//    case 't':
+  //      if (isset($_SESSION['login'])){
+ //           require "tasks.php";
+  //          require "taskform.php";
+  //      }
+    //    else{
+   //         $msg = 'Войдите в систему для работы с бд';
+   //     }
+   //     break;
 }
 echo '</main>';
 

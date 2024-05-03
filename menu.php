@@ -27,6 +27,9 @@
                         <a class="nav-link" href="index.php?page=v">Маршруты</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="index.php?page=n">Рейсы</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="index.php?page=b">Заказы (грузы)</a>
                     </li>
                 </ul>

@@ -15,7 +15,7 @@ while ($row = $result->fetch()) {
                         
                     </div>
                     <div class="col-md-7">
-                    <a class="nav-link" href="/index.php?page=t" >
+                    <a class="nav-link" href="/index.php?page=c" >
                         <h5 class="card-title">' . 'ID транспорта - ' . $row['ID'] . '</h5>
                         <p class="card-text">' . 'Грузоподъёмность - ' .$row['Грузоподъёмность'] . ' ' .'кг' .'</p>
                     </a>

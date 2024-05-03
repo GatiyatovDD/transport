@@ -11,14 +11,14 @@ while ($row = $result->fetch()) {
             <div class="card-body text-dark">
                 <div class="row g-0"> 
                     <div class="col-md-10">
-                    <a class="nav-link" href="/index.php?page=t" >                  
+                    <a class="nav-link" href="/index.php?page=b" >                  
                         <p class="card-text">' . 'ID рейса - ' .$row['ID_Рейса']  .'</>
                         <p class="card-text">' . 'Вес - ' .$row['Вес'] . ' ' .'кг' .'</>
                         <p class="card-text">' . 'Отправитель - ' .$row['Отправитель']  .'</>
                         </a>          
                     </div>
                     <div class="col-md-1">
-                        <a href="deletecategory.php?id='.$row['id'].'" class="btn btn-danger">Удалить</a>
+                        <a href="deletecargo.php?ID='.$row['ID'].'" class="btn btn-danger">Удалить</a>
                     </div>                    
                 </div>             
             </div>           
@@ -38,13 +38,13 @@ while ($row = $result->fetch()) {
             ID Заказа (груза): <input type="text" name="ID">
         </label>
     <p><label>
-            ID Рейса: <input type="number" name="ID_Рейса">
+            ID Рейса: <input type="text" name="ID_cruise">
         </label>
     <p><label>
-            Вес: <input type="text" name="Вес">
+            Вес: <input type="text" name="Weight">
         </label>
     <p><label>
-            Отправитель: <input type="text" name="Отправитель">
+            Отправитель: <input type="text" name="Sender">
         </label>
     <p><input type="submit" value="Добавить">
 </form>

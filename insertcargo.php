@@ -1,13 +1,13 @@
 <?php
 require "dbconnect.php";
-if (strlen($_POST['ID_Рейса']) == 4){
+if (strlen($_POST['ID_cruise']) >= 4){
     try {
-        $sql = 'INSERT INTO cargo(ID, ID_Рейса, Вес, Отправитель) VALUES(ID, ID_Рейса, Вес, Отправитель )';
+        $sql = 'INSERT INTO cargo(ID, ID_Рейса, Вес, Отправитель) VALUES(:ID, :ID_cruise, :Weight, :Sender )';
         $stmt = $conn->prepare($sql);
-        $stmt->bindValue('ID',$_POST['ID']);
-        $stmt->bindValue('ID_Рейса',$_POST['ID_Рейса']);
-        $stmt->bindValue('Вес', $_POST['Вес']);
-        $stmt->bindValue('Отправитель', $_POST['Отправитель'],$type = PDO::PARAM_STR);
+        $stmt->bindValue(':ID',$_POST['ID']);
+        $stmt->bindValue(':ID_cruise',$_POST['ID_cruise']);
+        $stmt->bindValue(':Weight', $_POST['Weight']);
+        $stmt->bindValue(':Sender', $_POST['Sender']);
         $stmt->execute();
         $_SESSION['msg'] = "Заказ (груз) успешно добавлен";
         // return generated id
